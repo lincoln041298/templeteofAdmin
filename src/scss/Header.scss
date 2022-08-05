@@ -1,0 +1,21 @@
+.top-bar-boxed::before {
+  @apply before:content-[''] before:absolute before:right-0 before:bottom-0 before:left-0 before:top-0 before:ml-7 before:mr-7 hidden;
+}
+
+.breadcrumb-light {
+  @apply border-l-[0.5px] border-whiteopacity h-10 p-5;
+}
+
+.breadcrumb .breadcrumb-item:not(:first-child):before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-right breadcrumb__icon'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: 100%;
+  margin-left: -1.125rem;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
