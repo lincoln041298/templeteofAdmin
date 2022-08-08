@@ -22,7 +22,7 @@ export function Avatar({ age }: AvatarProps) {
   const handleClickAvatar = (e: any) => {
     setIsActice(!isActive);
   };
-
+  
   const clickOutside = (e: any) => {
     if (node.current.contains(e.target)) {
       return;
