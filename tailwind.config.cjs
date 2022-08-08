@@ -5,14 +5,15 @@ module.exports = {
     extend: {
       colors: {
         colorprimary: "#164E63",
+        colorprimarymenu: "#113E50",
         whiteopacity: "rgb(255,255,255,0.2)",
       },
       transitionProperty: {
-        'width': 'width'
+        width: "width",
       },
       fontSize: {
-        'lessxs': '0.55rem' 
-      }
+        lessxs: "0.55rem",
+      },
     },
   },
   plugins: [],

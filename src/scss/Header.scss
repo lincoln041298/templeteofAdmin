@@ -7,7 +7,7 @@
 }
 
 .breadcrumb.breadcrumb-light .breadcrumb-item:not(:first-child):before {
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23e8eeff' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-right breadcrumb__icon'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23e8eeff' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-right breadcrumb__icon'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
 }
 
 .breadcrumb .breadcrumb-item:not(:first-child):before {
@@ -25,23 +25,20 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 .breadcrumb-item.active {
-  @apply cursor-text text-white opacity-60
-}
-.dot-red  {
-  @apply relative
+  @apply cursor-text text-white opacity-60;
 }
 
 .dot-red {
-  @apply before:content-[''] before:absolute before:top-[0.1rem] before:right-[1.35rem] before:rounded-full before:w-1 before:h-1 before:bg-red-900
+  @apply relative before:content-[''] before:absolute before:top-[0.1rem] before:right-[1.35rem] before:rounded-full before:w-2 before:h-2 before:bg-red-900;
 }
 
-// .dot-red::before {
-//   content: '';
-//   top:.1rem;
-//   position: absolute;
-//   right: 1.3rem;
-//   border-radius: 9999px;
-//   width: 5px;
-//   height: 5px;
-//   background-color: #b81c1c;
-// }
+.menu-avatar {
+  transition: all cubic-bezier(0.4, 0, 0.2, 1) 500ms;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.active {
+  transform: translateY(0);
+  opacity: 1;
+}
