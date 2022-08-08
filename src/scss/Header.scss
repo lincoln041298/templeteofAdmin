@@ -34,14 +34,3 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 .dot-red {
   @apply before:content-[''] before:absolute before:top-[0.1rem] before:right-[1.35rem] before:rounded-full before:w-1 before:h-1 before:bg-red-900
 }
-
-// .dot-red::before {
-//   content: '';
-//   top:.1rem;
-//   position: absolute;
-//   right: 1.3rem;
-//   border-radius: 9999px;
-//   width: 5px;
-//   height: 5px;
-//   background-color: #b81c1c;
-// }
