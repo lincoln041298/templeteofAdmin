@@ -1,7 +1,9 @@
 import Logo from "public/Logo/logo.svg";
 import search from "public/svg/search.svg";
-import bell from "public/svg/bell.svg";
+
 import { Avatar } from "./Avatar";
+import { Link } from "react-router-dom";
+import { Notification } from "./Notification";
 
 export interface HeaderProps {
   name?: string;
@@ -12,16 +14,19 @@ export function Header({ name }: HeaderProps) {
     <div className="top-bar-boxed bg-colorprimary h-[70px] md:h-[65px] mt-12 md:mt-0 sm:-mx-8 md:mx-3 px-3 elative md:fixed md:inset-x-0 rounded-xl ">
       <div className="h-full flex justify-between">
         <div className="flex items-center">
-          <a href="#" className="logo -intro-x md:flex xl:w-[180px] block">
+          <Link to="/" className="logo -intro-x md:flex xl:w-[180px] block">
             <img src={Logo} className="logo__image w-6" alt="Logo demo" />
-            <span className="logo__text text-white text-lg ml-3"> Enigma </span>
-          </a>
+            <span className="logo__text text-white text-lg ml-3">Enigma</span>
+          </Link>
           <nav aria-label="breadcrumb" className="-intro-x mr-auto">
             <ol className="breadcrumb breadcrumb-light text-white font-light items-center flex">
-              <li className="breadcrumb-item">
+              <li className="breadcrumb-item text-sm font-light">
                 <a href="#">Application</a>
               </li>
-              <li className="breadcrumb-item active ml-5" aria-current="page">
+              <li
+                className="breadcrumb-item active ml-5 text-sm font-light"
+                aria-current="page"
+              >
                 Dashboard
               </li>
             </ol>
@@ -38,10 +43,8 @@ export function Header({ name }: HeaderProps) {
               <img src={search} alt="search bar" />
             </p>
           </form>
-          <p className="dot-red">
-            <img className="mx-5 pt-1 w-3" src={bell} alt="notification" />
-          </p>
-         <Avatar/>
+          <Notification />
+          <Avatar />
         </div>
       </div>
     </div>

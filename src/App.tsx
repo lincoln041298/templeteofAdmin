@@ -1,15 +1,20 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import { Route, Routes } from "react-router-dom";
 import { Student } from "./components/features/labs/student";
 import MainLayout from "./components/Layout/MainLayout";
+import { AddAccount, Help, Logout, Profile, ResetPassword } from "./page";
 
 function App() {
   return (
-    <div className="">
-      <MainLayout>
-        <Student />
-      </MainLayout>
-    </div>
+    <MainLayout>
+      <Routes>
+        <Route path="/" element={<Student />} />
+        <Route path="/profile" element={<Profile />}></Route>
+        <Route path="/addacount" element={<AddAccount />}></Route>
+        <Route path="/resetpassword" element={<ResetPassword />}></Route>
+        <Route path="/help" element={<Help />} />
+        <Route path="/logout" element={<Logout />} />
+      </Routes>
+    </MainLayout>
   );
 }
 
