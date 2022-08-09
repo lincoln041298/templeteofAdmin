@@ -27,9 +27,11 @@ export function SubMenu({ items, index, onClick, isActice }: SubMenuProps) {
           </p>
           <div className="font-medium text-sm ml-3">{items.title}</div>
         </div>
-        <p className={`${
-          isActice === items.title ? `rotate-180 transform` : ""
-        } `}>
+        <p
+          className={`${
+            isActice === items.title ? `rotate-180 transform` : ""
+          } duration-100 ease-in-out`}
+        >
           <FontAwesomeIcon icon={faAngleUp} />
         </p>
       </div>
@@ -44,7 +46,7 @@ export function SubMenu({ items, index, onClick, isActice }: SubMenuProps) {
               {items.subNav &&
                 items.subNav.map((item: any, index: any) => {
                   return (
-                    <div  className="mb-5 flex">
+                    <div className="mb-5 flex">
                       <p>{item.icon}</p>
                       <p className="font-medium text-sm ml-3">{item.title}</p>
                     </div>

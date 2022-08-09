@@ -1,9 +1,5 @@
-import {
-  faEnvelope
-} from "@fortawesome/free-regular-svg-icons";
-import {
-  faInbox, faUserGroup
-} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faInbox, faUserGroup } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import search from "public/svg/search.svg";
 import avtsearch from "public/thewk.webp";
@@ -35,7 +31,7 @@ export function Search() {
   }, [isActive]);
 
   return (
-    <section className="relative">
+    <section className="relative z-10">
       <form className="relative">
         <input
           ref={node}
